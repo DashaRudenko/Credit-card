@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome, <span id="welcomeUsername"></span>!</h1>
+    </header>
+    <p>This is the welcome page. You can add more content here.</p>
+    
+    <script>
+        // Отримання значень з параметра URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        // Відображення імені користувача у хедері
+        document.getElementById('welcomeUsername').innerText = username;
+    </script>
+    
+</body>
+</html>
